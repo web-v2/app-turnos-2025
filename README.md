@@ -4,7 +4,7 @@ Sistema de turnos en tiempo real con Node.js y Socket.IO. Esta versión moderniz
 
 ## 🚀 Produccion
 
-Link: [text](https://app-turnos-2025.onrender.com/)
+Link: [[text](https://app-turnos-2025.onrender.com)](https://app-turnos-2025.onrender.com/)
 
 - Servidor: [app.js](app.js), [JavaScript.server()](models/server.js:6)
 - Lógica de tickets: [JavaScript.TicketControl()](models/ticket-control.js:11), [JavaScript.siguiente()](models/ticket-control.js:47), [JavaScript.atenderTicket()](models/ticket-control.js:55)
