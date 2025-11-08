@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuevo Ticket</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="card" style="max-width:560px;margin:10vh auto;padding:28px;">
+      <h1 style="margin:0 0 16px 0;">Nuevo ticket</h1>
+      <div>
+        <span id="lblNuevoTicket">Cargando...</span>
+      </div>
+      <div style="margin-top:16px; display:flex; gap:12px; align-items:center;">
+        <button id="btnCrear" class="mute-btn" style="padding:10px 14px; border-radius:10px; border:1px solid var(--border); background: var(--accent-600); color:#0a0a0a; font-weight:600;">
+          Generar nuevo ticket
+        </button>
+        <span id="status" style="color:var(--muted); font-size:14px;"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="./socket.io/socket.io.js"></script>
+  <script src="./js/nuevo-ticket.js"></script>
+</body>
+</html>

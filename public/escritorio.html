@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escritorio - Turnos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="card" style="max-width:1024px;margin:6vh auto;padding:28px;">
+      <header style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;">
+        <h1 style="margin:0;">Escritorio</h1>
+        <span id="status" style="color:var(--muted);font-size:14px;"></span>
+      </header>
+
+      <div style="display:grid;grid-template-columns:1fr minmax(220px,280px);gap:24px;margin-top:16px;">
+        <section>
+          <h4 style="margin:0 0 12px 0;">Atendiendo a <small class="text-primary">....</small></h4>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="mute-btn" style="padding:12px 14px; border-radius:10px; border:1px solid var(--border); background: var(--accent-600); color:#0a0a0a; font-weight:600;">
+              Atender siguiente ticket
+            </button>
+            <button id="reiniciar" class="mute-btn" style="padding:12px 14px; border-radius:10px; border:1px solid var(--border); background: var(--card); color:var(--text);">
+              Activar Atenciones
+            </button>
+          </div>
+        </section>
+
+        <aside class="text-center">
+          <h4 style="margin:0 0 10px 0;">En cola</h4>
+          <div class="alert" style="display:block; color:var(--muted); font-size:14px; margin:6px 0 10px 0;">
+            <span>Ya no hay más tickets</span>
+          </div>
+          <h1 id="lblPendientes" style="margin:0; font-size:56px;">10</h1>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="./socket.io/socket.io.js"></script>
+  <script src="./js/escritorio.js"></script>
+</body>
+</html>

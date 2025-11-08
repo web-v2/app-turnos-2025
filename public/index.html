@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa de Colas</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <section class="card" style="max-width:1024px;margin:8vh auto;padding:28px;">
+      <h1 style="margin:0 0 18px 0;">Programa de Colas</h1>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <!-- Accesos rápidos -->
+        <section>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="mute-btn" href="publico.html" style="padding:12px 14px;border-radius:10px;border:1px solid var(--border);background: var(--accent-600);color:#0a0a0a;font-weight:700;text-decoration:none;">
+              Pantalla pública
+            </a>
+            <a class="mute-btn" href="nuevo-ticket.html" style="padding:12px 14px;border-radius:10px;border:1px solid var(--border);background: var(--card);color:var(--text);text-decoration:none;">
+              Crear tickets
+            </a>
+          </div>
+        </section>
+
+        <!-- Acceso a escritorio -->
+        <section>
+          <form action="escritorio.html" method="GET" aria-label="Ingresar a escritorio">
+            <label for="escritorio" style="display:block;margin:0 0 8px 0;color:var(--muted);">Escritorio</label>
+            <input id="escritorio"
+                   name="escritorio"
+                   type="text"
+                   placeholder="Ej: Agente 1"
+                   required
+                   autofocus
+                   style="width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:var(--bg-elev);color:var(--text);" />
+            <div style="height:12px;"></div>
+            <button type="submit" class="mute-btn" style="padding:12px 14px;border-radius:10px;border:1px solid var(--border);background: var(--accent-600);color:#0a0a0a;font-weight:700;">
+              Ingresar
+            </button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

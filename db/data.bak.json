@@ -1,0 +1,108 @@
+{
+  "ultimo": 70,
+  "date": "2025-11-08",
+  "tickets": [
+    {
+      "numero": 50,
+      "escritorio": null
+    },
+    {
+      "numero": 51,
+      "escritorio": null
+    },
+    {
+      "numero": 52,
+      "escritorio": null
+    },
+    {
+      "numero": 53,
+      "escritorio": null
+    },
+    {
+      "numero": 54,
+      "escritorio": null
+    },
+    {
+      "numero": 55,
+      "escritorio": null
+    },
+    {
+      "numero": 56,
+      "escritorio": null
+    },
+    {
+      "numero": 57,
+      "escritorio": null
+    },
+    {
+      "numero": 58,
+      "escritorio": null
+    },
+    {
+      "numero": 59,
+      "escritorio": null
+    },
+    {
+      "numero": 60,
+      "escritorio": null
+    },
+    {
+      "numero": 61,
+      "escritorio": null
+    },
+    {
+      "numero": 62,
+      "escritorio": null
+    },
+    {
+      "numero": 63,
+      "escritorio": null
+    },
+    {
+      "numero": 64,
+      "escritorio": null
+    },
+    {
+      "numero": 65,
+      "escritorio": null
+    },
+    {
+      "numero": 66,
+      "escritorio": null
+    },
+    {
+      "numero": 67,
+      "escritorio": null
+    },
+    {
+      "numero": 68,
+      "escritorio": null
+    },
+    {
+      "numero": 69,
+      "escritorio": null
+    },
+    {
+      "numero": 70,
+      "escritorio": null
+    }
+  ],
+  "ultimos4": [
+    {
+      "numero": 49,
+      "escritorio": "Agente1"
+    },
+    {
+      "numero": 48,
+      "escritorio": "Agente1"
+    },
+    {
+      "numero": 47,
+      "escritorio": "Agente2"
+    },
+    {
+      "numero": 46,
+      "escritorio": "Agente2"
+    }
+  ]
+}

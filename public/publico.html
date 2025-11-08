@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalla del público</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="public-screen" role="main">
+    <section class="public-hero">
+      <div class="hero-inner">
+        <div id="heroNumber" class="hero-number" aria-live="assertive">--</div>
+        <div id="heroDesk" class="hero-desk" aria-live="polite">Turno 1</div>
+      </div>
+    </section>
+
+    <aside class="public-side" aria-label="Últimos turnos">
+      <div class="ticket-tile slide-in" id="tile2">
+        <span id="t2" class="num">—</span>
+        <span id="d2" class="desk">Turno 2</span>
+      </div>
+      <div class="ticket-tile slide-in" id="tile3">
+        <span id="t3" class="num">—</span>
+        <span id="d3" class="desk">Turno 3</span>
+      </div>
+      <div class="ticket-tile slide-in" id="tile4">
+        <span id="t4" class="num">—</span>
+        <span id="d4" class="desk">Turno 4</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="settings" id="soundSettings" aria-label="Configuración de sonido">
+    <button id="muteBtn" class="mute-btn" type="button" title="Silenciar/Activar">Mute</button>
+    <label for="volRange">Volumen</label>
+    <input id="volRange" type="range" min="0" max="100" step="5" value="30" />
+  </div>
+
+  <script src="./socket.io/socket.io.js"></script>
+  <script src="./js/publico.js"></script>
+</body>
+</html>
