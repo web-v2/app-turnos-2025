@@ -2,6 +2,10 @@
 
 Sistema de turnos en tiempo real con Node.js y Socket.IO. Esta versión modernizada mejora seguridad, CORS, persistencia de datos (JSON atómico), endpoints de importación/exportación, y un flujo de desarrollo más cómodo.
 
+## 🚀 Produccion
+
+Link: [text](https://app-turnos-2025.onrender.com/)
+
 - Servidor: [app.js](app.js), [JavaScript.server()](models/server.js:6)
 - Lógica de tickets: [JavaScript.TicketControl()](models/ticket-control.js:11), [JavaScript.siguiente()](models/ticket-control.js:47), [JavaScript.atenderTicket()](models/ticket-control.js:55)
 - WebSockets: [JavaScript.socketController()](sockets/controller.js:5)
@@ -56,16 +60,19 @@ El servidor lee estas variables en [JavaScript.server()](models/server.js:6) y s
 ## Ejecutar
 
 Desarrollo:
+
 ```bash
 npm run dev
 ```
 
 Producción:
+
 ```bash
 npm start
 ```
 
 Abrir:
+
 - Pantalla principal: http://localhost:8080/
 - Crear tickets: http://localhost:8080/nuevo-ticket.html
 - Escritorio: http://localhost:8080/escritorio.html?escritorio=Agente%201
@@ -87,6 +94,7 @@ Abrir:
     ```
 
 Formato JSON esperado:
+
 ```json
 {
   "ultimo": number,
@@ -96,6 +104,7 @@ Formato JSON esperado:
 ```
 
 Notas:
+
 - La fecha interna se normaliza al día actual local. El archivo persistido usa `date: "YYYY-MM-DD"`. Ver [JavaScript.guardarDB()](models/ticket-control.js:116).
 
 ## Persistencia de datos
@@ -105,16 +114,19 @@ Notas:
 - Esquema legado soportado y migrado automáticamente (campo `hoy`). Ver [JavaScript.init()](models/ticket-control.js:61).
 
 Escritura atómica con copia `.bak`:
-1) escribe `data.tmp`, 2) rota `data.json` a `data.bak.json`, 3) renombra `data.tmp` a `data.json`. Rollback ante error.
+
+1. escribe `data.tmp`, 2) rota `data.json` a `data.bak.json`, 3) renombra `data.tmp` a `data.json`. Rollback ante error.
 
 ## WebSockets
 
 Eventos emitidos (servidor) ver [JavaScript.socketController()](sockets/controller.js:5):
+
 - `ultimo-ticket`: número del último ticket creado.
 - `estado-actual`: arreglo de los últimos 4 atendidos.
 - `tickets-pendientes`: cantidad en cola.
 
 Eventos recibidos:
+
 - `siguiente-ticket` (ack string): crea ticket.
 - `atender-ticket` ({ escritorio }, ack { ok, ticket|message }): atiende siguiente.
 
@@ -127,6 +139,7 @@ Eventos recibidos:
 ## CORS
 
 CORS estricto habilitado en:
+
 - HTTP (Express) y WebSocket (Socket.IO), ambos leen `CORS_ORIGINS`. Ver [JavaScript.middleware()](models/server.js:29) y configuración de `io` en [JavaScript.server()](models/server.js:11).
 - Agrega tus dominios productivos separados por comas.
 
